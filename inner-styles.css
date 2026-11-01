@@ -297,4 +297,14 @@ body {
     main p {
         color: var(--black);
     }
+
+    /*grad students click here refernce*/
+    main div.page-body p a {
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    main div.page-body p a:hover {
+        text-decoration: underline;
+    }
 }
