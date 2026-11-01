@@ -1,6 +1,5 @@
 main {
     .pull {
-        border: 10px solid black;
         display: inline-block;
 
         &.right {
