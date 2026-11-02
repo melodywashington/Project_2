@@ -1,0 +1,108 @@
+:root {
+    --engDeptGreen: #505A2F;
+    --light-green: #B4B697;
+    --burgundy: #A12D37;
+    --menu-grey: #F2F1F0;
+}
+
+/* buttons */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* give a gift to the department */
+.btn-primary {
+    background-color: var(--burgundy);
+    color: #fff;
+}
+
+/*Calendar,2005 Newsletter */
+.btn-outline {
+    border: 2px solid var(--engDeptGreen);
+    color: var(--engDeptGreen);
+}
+
+/* Learn more, More News & Announcements*/
+.btn-small {
+    display: inline-flex;
+    min-height: auto;
+    padding: 4px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.btn-row {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0 24px;
+}
+
+.btn-row .btn {
+    flex: 1;
+}
+
+.card {
+    background-color: var(--light-green);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+/* friends and alumni */
+.hero-photo {
+    display: block;
+    width: 100%;
+    height: clamp(180px, 30vw, 320px);
+    object-fit: cover;
+}
+
+body section.container section.middle section.inner main.friends-panel {
+    position: relative;
+    margin-top: -30px;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    padding: clamp(20px, 4vw, 40px);
+}
+
+main.friends-panel h2,
+main.friends-panel h3 {
+    color: var(--burgundy);
+    text-transform: uppercase;
+    font-size: clamp(22px, 4vw, 32px);
+    border-bottom: 3px solid var(--burgundy);
+    padding-bottom: 6px;
+    margin: 0 0 16px;
+}
+
+main.friends-panel p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+main.friends-panel .btn-primary {
+    margin-top: 24px;
+}
+
+main.friends-panel .card h4 {
+    text-transform: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+main.friends-panel .card p {
+    margin: 0 0 10px;
+}
+
+main.friends-panel .card .btn-small {
+    margin-top: 0;
+}
