@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>HUMIS Homepage in GitHub!</title>
   <link rel="stylesheet" href="homepage-styles.css">
+  <link rel="stylesheet" href="figma-designs.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -11,44 +12,26 @@
 <div class="container">
 
   <header>
-    <img src="files/historyHome.gif" alt="U of U History Department logo"/>
-    <img src="files/histHomepic.jpg" alt="Shelf of books"/>
+    <img src="files/historyHome.gif" alt="Department of History, University of Utah"/>
+    <img src="files/histHomepic.jpg" alt="Shelf of history books"/>
   </header>
 
   <section class="middle">
-    <nav>
+    <nav class="desktop-only">
       <a href="#">Campus directory</a>
       <a href="#">Department calendar</a>
       <a href="contact-us.html">Contact us</a>
-
       <a href="#">
-        <img src="files/u_small.gif" alt="U of U Logo"/>
+        <img src="files/u_small.gif" alt="University of Utah"/>
       </a>
-    </nav>
-
-    <nav class="drop-down-menu">
-      <label for="major-navigation">
-        <select name="major-navigation" id="major-navigation">
-          <option value="#">About us</option>
-          <!--<option value="#">Faculty &amp; staff</option>-->
-          <!--<option value="#">Undergraduate students</option>-->
-          <option value="#">Graduate students</option>
-          <!--<option value="#">Courses &amp; syllabi</option>-->
-          <option value="#">News &amp; announcements</option>
-          <option value="#">Friends &amp; alumni</option>
-          <option value="#">Contact us</option>
-        </select>
-      </label>
     </nav>
 
     <div class="green-box">
       <aside class="left-side">
         <nav class="left-nav">
+          <a href="index.html">Home</a>
           <a href="about-us.html">About us</a>
-          <!--<a href="#">Faculty &amp; staff</a>-->
-          <!--<a href="#">Undergraduate students</a>-->
           <a href="grad-students.html">Graduate students</a>
-          <!--<a href="#">Courses &amp; syllabi</a>-->
           <a href="news.html">News &amp; announcements</a>
           <a href="friends-and-alum.html">Friends &amp; alumni</a>
           <a href="contact-us.html">Contact us</a>
@@ -56,29 +39,37 @@
       </aside>
 
       <main>
-        <img src="files/women_w_pottery.jpg" alt="Women w pottery"/>
+        <h2 class="section-title">News &amp; Announcements</h2>
 
-        <p>The history of women in Mexico is a profound narrative of resilience, transformation, and leadership
-          that spans from the pre-Columbian era to the modern day. In Mesoamerican civilizations like the Maya
-          and Aztecs, women held vital, dual roles as spiritual guardians, healers, and economic contributors,
-          even as they navigated strictly defined gender structures. The Spanish conquest in 1519 radically
-          disrupted these traditions, imposing patriarchal colonial laws and Catholic structures that
-          restricted women's autonomy. Yet, figures like Sor Juana Inés de la Cruz emerged during this time,
-          defying social limitations to become one of the greatest scholars and poets of the Spanish Golden
-          Age, laying early intellectual foundations for women’s rights.</p>
-        <p>The 19th and early 20th centuries marked a major turning point as Mexican women actively shaped the
-          nation's political identity. During the Mexican War of Independence, figures like Josefa Ortiz de
-          Domínguez risked their lives to pass critical intelligence to insurgents. Decades later, during the
-          Mexican Revolution (1910–1920), thousands of women known as soldaderas took up arms, served as camp
-          followers, smuggled weapons, and worked as nurses and journalists. Despite their immense
-          contributions to the birth of modern Mexico, women had to fight for decades more to gain formal
-          political recognition, finally securing the right to vote in national elections in 1953.</p>
-        <p>In recent decades, the feminist movement in Mexico has achieved historic milestones while tackling
-          deep-seated systemic challenges. The 21st century has seen a dramatic shift toward political parity,
-          culminating in the historic election of Claudia Sheinbaum in 2024 as Mexico's first female
-          president. Today, Mexican women continue to lead powerful grassroots movements, driving national
-          conversations around gender equality, labor rights, and an end to gender-based violence. Their
-          ongoing advocacy continues to reshape the legal, social, and cultural landscape of the country.</p>
+        <div class="news-carousel">
+          <article class="news-slide">
+            <img src="files/women_w_pottery.jpg" alt="Women in embroidered dresses holding painted pottery"/>
+            <p><strong>The History of Women &amp; Gender in Mexico:</strong>
+              From Mesoamerican healers and spiritual guardians to the soldaderas
+              of the Revolution, explore how Mexican women have shaped the nation.</p>
+          </article>
+
+          <article class="news-slide">
+            <img src="files/students-graduating.png" alt="Graduates in caps and gowns at commencement"/>
+            <p><strong>James L. Clayton Distinguished Research Chair:</strong>
+              A new award honoring our recently retired colleague and supporting
+              especially promising research in the department.</p>
+          </article>
+
+          <article class="news-slide">
+            <img src="files/grad-student.png" alt="Graduate student taking notes in class"/>
+            <p><strong>Dean L. May Graduate Fellowship:</strong>
+              Thanks to generous donors, a fellowship in the History of Utah
+              and the American West has become a reality.</p>
+          </article>
+        </div>
+
+        <p><a href="news.html" class="btn btn-primary btn-small">More News &amp; Announcements</a></p>
+
+        <div class="login-links">
+          <img src="files/login-cis.gif" alt="Log into CIS"/>
+          <img src="files/login-humis.gif" alt="Log into HUMIS"/>
+        </div>
       </main>
 
       <div style="clear: both;"></div>

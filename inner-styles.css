@@ -260,10 +260,6 @@ body {
             color: var(--burgundy);
             text-decoration: none;
 
-            &.active {
-                font-weight: bold;
-            }
-
             &:hover {
                 text-decoration: underline;
             }
