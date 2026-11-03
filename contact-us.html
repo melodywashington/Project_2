@@ -5,6 +5,8 @@
   <title>HUMIS mobile-first flexbox responsive layout</title>
   <link rel="stylesheet" href="inner-styles.css">
   <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="mobile-menu.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -17,18 +19,37 @@
     </a>
 
     <img src="files/histBooks01.jpg" alt="Books on a table"/>
+
+    <div class="mobile-nav">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">
+        <span class="material-symbols-outlined icon-open">menu</span>
+        <span class="material-symbols-outlined icon-close">close</span>
+        Menu
+      </label>
+
+      <nav class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About us</a>
+        <a href="grad-students.html">Graduate students</a>
+        <a href="news.html">News &amp; announcements</a>
+        <a href="friends-and-alum.html">Friends &amp; alumni</a>
+        <a href="contact-us.html">Contact us</a>
+      </nav>
+    </div>
   </header>
 
   <section class="middle">
     <div class="left-side">
       <nav class="left-nav">
+        <a href="index.html">Home</a>
         <a href="about-us.html">About us</a>
-        <a href="#">Faculty &amp; staff</a>
-        <a href="#">Undergraduate students</a>
-        <a href="#">Graduate students</a>
-        <a href="#">Courses &amp; syllabi</a>
-        <a href="#">News &amp; announcements</a>
-        <a href="#">Friends &amp; alumni</a>
+        <!--<a href="#">Faculty &amp; staff</a>-->
+        <!--<a href="#">Undergraduate students</a>-->
+        <a href="grad-students.html">Graduate students</a>
+        <!--<a href="#">Courses &amp; syllabi</a>-->
+        <a href="news.html">News &amp; announcements</a>
+        <a href="friends-and-alum.html">Friends &amp; alumni</a>
         <a href="contact-us.html" class="active">Contact us</a>
       </nav>
 
@@ -45,11 +66,12 @@
 
         <label for="major-navigation">
           <select name="major-navigation" id="major-navigation">
-            <option value="about-us.html">About us</option>
-            <option value="#">Faculty &amp; staff</option>
-            <option value="#">Undergraduate students</option>
+            <option value="#">Home</option>
+            <option value="#">About us</option>
+            <!--<option value="#">Faculty &amp; staff</option>-->
+            <!--<option value="#">Undergraduate students</option>-->
             <option value="#">Graduate students</option>
-            <option value="#">Courses &amp; syllabi</option>
+            <!--<option value="#">Courses &amp; syllabi</option>-->
             <option value="#">News &amp; announcements</option>
             <option value="#">Friends &amp; alumni</option>
             <option value="#">Contact us</option>
@@ -60,7 +82,7 @@
       <nav class="minor top">
         <a href="#">Campus directory</a>
         <a href="#">Department calendar</a>
-        <a href="contact-us.html" class="active">Contact us</a>
+        <a href="contact-us.html">Contact us</a>
 
         <a href="#">
           <img src="files/u_small.gif" alt="U of U Logo"/>
@@ -69,6 +91,54 @@
 
       <main>
         <h2>Contact Us</h2>
+
+        <nav class="sub-nav">
+          <a href="contact-us.html">Contact information</a>
+          <a href="#">Faculty directory</a>
+          <a href="#">Staff directory</a>
+        </nav>
+
+        <h4>
+          U.S. Mail
+        </h4>
+
+        <p>University of Utah<br>
+          Department of History<br>
+          380 S 1400 E RM 211<br>
+          Salt Lake City, UT 84112-0311
+        </p>
+
+        <h4>Campus Mail</h4>
+        <p>
+          Department of History<br>
+          211 C Hall
+        </p>
+
+        <h4>
+          Phone
+        </h4>
+
+        <p>
+          (801) 581-6121
+        </p>
+
+        <h4>
+          Fax
+        </h4>
+
+        <p>
+          (801) 585-0580
+        </p>
+
+        <h4>
+          Hours
+        </h4>
+
+        <p>
+          Monday &ndash; Friday<br>
+          8:00 AM &ndash; 5:00 PM
+        </p>
+
       </main>
 
       <nav class="minor bottom">
@@ -87,4 +157,3 @@
 </section>
 
 </body>
-</html>

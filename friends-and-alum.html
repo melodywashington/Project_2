@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HUMIS mobile-first flexbox responsive layout</title>
+    <link rel="stylesheet" href="inner-styles.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="figma-designs.css">
+    <link rel="stylesheet" href="mobile-menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<section class="container">
+
+    <header>
+        <a href="index.html">
+            <img src="files/historyHeader.gif" alt="HUMIS project"/>
+        </a>
+
+        <img src="files/histBooks01.jpg" alt="Books on a table"/>
+
+        <div class="mobile-nav">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+                <span class="material-symbols-outlined icon-open">menu</span>
+                <span class="material-symbols-outlined icon-close">close</span>
+                Menu
+            </label>
+
+            <nav class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="grad-students.html">Graduate students</a>
+                <a href="news.html">News &amp; announcements</a>
+                <a href="friends-and-alum.html">Friends &amp; alumni</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="middle">
+        <div class="left-side">
+            <nav class="left-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="grad-students.html">Graduate students</a>
+                <a href="news.html">News &amp; announcements</a>
+                <a href="friends-and-alum.html" class="active">Friends &amp; alumni</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+
+            <div class="login-links">
+                <img src="files/login-cis.gif" alt="Log into CIS"/>
+                <img src="files/login-humis.gif" alt="Log into HUMIS"/>
+            </div>
+        </div>
+
+        <section class="inner">
+
+            <nav class="drop-down-menu">
+                Navigate:
+
+                <label for="major-navigation">
+                    <select name="major-navigation" id="major-navigation">
+                        <option value="index.html">Home</option>
+                        <option value="about-us.html">About us</option>
+                        <option value="grad-students.html">Graduate students</option>
+                        <option value="news.html">News &amp; announcements</option>
+                        <option value="friends-and-alum.html">Friends &amp; alumni</option>
+                        <option value="contact-us.html">Contact us</option>
+                    </select>
+                </label>
+            </nav>
+
+            <nav class="minor top">
+                <a href="#">Campus directory</a>
+                <a href="#">Department calendar</a>
+                <a href="contact-us.html">Contact us</a>
+
+                <a href="#">
+                    <img src="files/u_small.gif" alt="U of U Logo"/>
+                </a>
+            </nav>
+
+            <img src="files/alumni-lawn.png" alt="Student reading on the campus lawn" class="hero-photo"/>
+
+            <main class="friends-panel">
+                <h2>Friends &amp; Alumni</h2>
+
+                <p>
+                    We invite our friends and alumni to stay in touch with us and
+                    support our students and programs. Through their study of history,
+                    our students learn the essential skills of citizenship and a better
+                    understanding of what it means to be human.
+                </p>
+
+                <p>
+                    Your support is critical to our students' success. Your gift
+                    to the History Department supports scholarships and programs that
+                    will help them excel as students and reach their full potential as
+                    graduates of the University of Utah.
+                </p>
+
+                <a href="#" class="btn btn-primary">Give a gift to the department</a>
+
+                <div class="btn-row">
+                    <a href="#" class="btn btn-outline">Calendar</a>
+                    <a href="#" class="btn btn-outline">2005 Newsletter</a>
+                </div>
+
+                <h3>Of Interest ...</h3>
+
+                <div class="card">
+                    <h4>James L. Clayton Distinguished Research Chair</h4>
+                    <p>
+                        This year the History Department is pleased to announce the creation
+                        of the James L. Clayton Distinguished Research Chair in the Department
+                        of History. This is an innovative award created to honor our recently
+                        retired colleague, Jim Clayton, and offer vital support to especially
+                        promising research projects in the department.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                </div>
+
+                <div class="card">
+                    <h4>Dean L. May Graduate Fellowship</h4>
+                    <p>
+                        Thanks to the generosity of several large donors, including the
+                        George S. and Dolores Doré Eccles Foundation, along with the
+                        support of scores of former students, colleagues, and friends, the
+                        Dean L. May Graduate Fellowship in the History of Utah and the
+                        American West has become a reality.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                </div>
+            </main>
+
+            <nav class="minor bottom">
+                <a href="#">Disclaimer</a>
+                <a href="#">Text only</a>
+                <a href="#">Webmaster</a>
+            </nav>
+
+        </section>
+    </section>
+
+    <footer>
+        380 SOUTH 1400 EAST | 211 C HALL | SALT LAKE CIT Y | UT | 84112 | PHONE 801.581.6121 | FAX 801.585.0580
+    </footer>
+
+</section>
+
+</body>
+</html>

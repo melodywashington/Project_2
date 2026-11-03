@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HUMIS mobile-first flexbox responsive layout</title>
+    <link rel="stylesheet" href="inner-styles.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="images.css">
+    <link rel="stylesheet" href="mobile-menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<section class="container">
+
+    <header>
+        <a href="index.html">
+            <img src="files/historyHeader.gif" alt="HUMIS project"/>
+        </a>
+
+        <img src="files/histBooks01.jpg" alt="Books on a table"/>
+
+        <div class="mobile-nav">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+                <span class="material-symbols-outlined icon-open">menu</span>
+                <span class="material-symbols-outlined icon-close">close</span>
+                Menu
+            </label>
+
+            <nav class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="grad-students.html">Graduate students</a>
+                <a href="news.html">News &amp; announcements</a>
+                <a href="friends-and-alum.html">Friends &amp; alumni</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="middle">
+        <div class="left-side">
+            <nav class="left-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="grad-students.html" class="active">Graduate students</a>
+                <a href="news.html">News &amp; announcements</a>
+                <a href="friends-and-alum.html">Friends &amp; alumni</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+
+            <div class="login-links">
+                <img src="files/login-cis.gif" alt="Log into CIS"/>
+                <img src="files/login-humis.gif" alt="Log into HUMIS"/>
+            </div>
+        </div>
+
+        <section class="inner">
+
+            <nav class="drop-down-menu">
+                Navigate:
+
+                <label for="major-navigation">
+                    <select name="major-navigation" id="major-navigation">
+                        <option value="about-us.html">About us</option>
+                        <option value="grad-students.html">Graduate students</option>
+                        <option value="news.html">News &amp; announcements</option>
+                        <option value="friends-and-alum.html">Friends &amp; alumni</option>
+                        <option value="contact-us.html">Contact us</option>
+                    </select>
+                </label>
+            </nav>
+
+            <nav class="minor top">
+                <a href="#">Campus directory</a>
+                <a href="#">Department calendar</a>
+                <a href="contact-us.html">Contact us</a>
+
+                <a href="#">
+                    <img src="files/u_small.gif" alt="U of U Logo"/>
+                </a>
+            </nav>
+
+            <main class="two-col-page">
+                <h2>Graduate Students</h2>
+
+                <div class="two-col">
+                    <div class="page-intro">
+                        <h4>Prospective Students</h4>
+                        <nav class="intro-links">
+                            <a href="#">Application</a>
+                            <a href="#">Financial Aid</a>
+                            <a href="#">HGSA</a>
+                            <a href="#">Campus &amp; Community</a>
+                            <a href="#">FAQ</a>
+                        </nav>
+
+                        <h4>Current Students</h4>
+                        <nav class="intro-links">
+                            <a href="#">Deadlines</a>
+                            <a href="#">HGSA</a>
+                            <a href="#">Campus &amp; Community</a>
+                            <a href="#">Recent Graduates</a>
+                            <a href="#">FAQ</a>
+                        </nav>
+                    </div>
+
+                    <div class="page-body">
+                        <img src="files/grad-student.png" alt="Graduate student taking notes in class"/>
+
+                        <p>
+                            Thank you for your interest in the graduate program in history at the
+                            University of Utah. If you would like to apply for admission to the
+                            graduate program in History for the Fall Semester of 2006, please
+                            <a href="#">click here</a>. Please note that the application deadline
+                            for the 2006-2007 academic year is <strong>January 15, 2006</strong>.
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <nav class="minor bottom">
+                <a href="#">Disclaimer</a>
+                <a href="#">Text only</a>
+                <a href="#">Webmaster</a>
+            </nav>
+
+        </section>
+    </section>
+
+    <footer>
+        380 SOUTH 1400 EAST | 211 C HALL | SALT LAKE CIT Y | UT | 84112 | PHONE 801.581.6121 | FAX 801.585.0580
+    </footer>
+
+</section>
+
+</body>
+</html>
