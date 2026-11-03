@@ -71,15 +71,6 @@ body {
                     }
                 }
 
-                &.drop-down-menu {
-                    border: 1px solid black;
-                    margin-top: 10px;
-
-                    select {
-                        width: 100%;
-                    }
-                }
-
                 &.bottom {
                     text-transform: lowercase;
                     margin-top: auto;
@@ -123,10 +114,6 @@ body {
             section.middle {
                 > nav {
                     text-align: right;
-
-                    &.drop-down-menu {
-                        display: none;
-                    }
                 }
 
                 div.green-box {

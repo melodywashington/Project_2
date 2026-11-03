@@ -54,23 +54,6 @@ body {
                 flex-direction: column;
                 flex-grow: 1;
 
-                nav.drop-down-menu {
-                    display: flex;
-                    gap: 20px;
-                    justify-content: center;
-                    background-color: var(--grey-light);
-                    padding: 20px 10px;
-                    order: -1;
-
-                    label {
-                        display: flex;
-
-                        select {
-                            width: 100%;
-                        }
-                    }
-                }
-
                 nav.minor {
                     display: flex;
                     justify-content: center;
@@ -128,7 +111,6 @@ body {
             font-size: 10px;
         }
 
-
         /* Tablet and up overrides */
         @media screen and (width >= 600px) {
             section.middle {
@@ -178,10 +160,6 @@ body {
                 section.inner {
                     width: 70%;
 
-                    nav.drop-down-menu {
-                        display: none;
-                    }
-
                     nav.minor {
                         justify-content: flex-end;
                     }
@@ -193,7 +171,7 @@ body {
             }
         }
 
-        /* bigger screens*/
+        /* bigger screens */
         @media screen and (width >= 1200px) {
             section.middle {
                 div.left-side {
@@ -236,199 +214,189 @@ body {
         }
     }
 
-    /* news and grad pages: columns stretch to the bottom */
-    main.two-col-page {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    main.two-col-page div.two-col {
-        flex-grow: 1;
-    }
-
-    /* news and announcements */
-    main a.action-link {
-        color: var(--burgundy);
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 13px;
-    }
-
-    main a.action-link:hover {
-        text-decoration: underline;
-    }
-
-    main div.two-col {
-        display: flex;
-        flex-direction: column;
-    }
-
-    main nav.intro-links {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 24px;
-        font-size: 14px;
-    }
-
-    main nav.intro-links a {
-        color: var(--black);
-        text-decoration: none;
-    }
-
-    main nav.intro-links a.active {
-        font-weight: bold;
-    }
-
-    main nav.intro-links a:hover {
-        text-decoration: underline;
-    }
-
-    main div.page-body aside.pull {
-        width: 35%;
-    }
-
-    main div.page-body aside.pull img {
-        width: 100%;
-    }
-
-    @media screen and (width >= 900px) {
-        main div.two-col {
-            flex-direction: row;
-            gap: 30px;
-        }
-
-        main div.two-col .page-intro {
-            width: 30%;
-            min-width: 240px;
-            flex-shrink: 0;
-        }
-
-        main div.two-col .page-body {
-            flex-grow: 1;
-            min-width: 0;
-            border-left: 3px dotted var(--black);
-            padding-left: 30px;
-        }
-    }
-
-    main div.page-body h3,
-    main div.page-body h4,
-    main div.page-body p,
-    main div.page-body em {
-        color: var(--black);
-    }
-
-    /* Contact us page fixing color from typography.css */
-    main nav.sub-nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        font-size: 14px;
-        text-transform: uppercase;
-        border-bottom: 3px solid var(--black);
-        padding-bottom: 10px;
-        margin-bottom: 24px;
-
-        a {
+    main {
+        h2 {
             color: var(--burgundy);
+            text-transform: uppercase;
+            font-size: 26px;
+            margin: 8px 0 16px;
+        }
+
+        h4 {
+            color: var(--black);
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 19px 0 0;
+
+            & + p {
+                margin-top: 3px;
+            }
+        }
+
+        p {
+            color: var(--black);
+        }
+
+        &.two-col-page {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            div.two-col {
+                flex-grow: 1;
+            }
+        }
+
+        div.two-col {
+            display: flex;
+            flex-direction: column;
+
+            .page-intro h2 {
+                font-size: 24px;
+            }
+        }
+
+        div.page-body {
+            h3, h4, p, em {
+                color: var(--black);
+            }
+
+            aside.pull {
+                width: 35%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            p a {
+                color: var(--black);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        /* news and announcements */
+        nav.intro-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+
+            a {
+                color: var(--black);
+                text-decoration: none;
+
+                &.active {
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        a.action-link {
+            color: var(--burgundy);
+            font-weight: bold;
             text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
 
             &:hover {
                 text-decoration: underline;
             }
+        }
 
-            &:not(:last-of-type)::after {
-                content: "|";
-                color: var(--black);
-                margin: 0 10px;
+        /* contact us */
+        nav.sub-nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--black);
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+
+            a {
+                color: var(--burgundy);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:not(:last-of-type)::after {
+                    content: "|";
+                    color: var(--black);
+                    margin: 0 10px;
+                }
             }
         }
-    }
 
-    main h2 {
-        color: var(--burgundy);
-        text-transform: uppercase;
-        margin: 8px 0 16px;
-    }
-
-    /* page titles grow as the screen gets wider */
-    main h2 {
-        font-size: 26px;
-    }
-
-    @media screen and (width >= 600px) {
-        main h2 {
-            font-size: 30px;
-        }
-    }
-
-    @media screen and (width >= 1200px) {
-        main h2 {
-            font-size: 44px;
-        }
-    }
-
-    /* news title, left column */
-    main div.two-col .page-intro h2 {
-        font-size: 24px;
-    }
-
-    @media screen and (width >= 1200px) {
-        main div.two-col .page-intro h2 {
-            font-size: 32px;
-        }
-    }
-
-    main h4 {
-        color: var(--black);
-        text-transform: uppercase;
-        font-size: 16px;
-        margin: 19px 0 0;
-    }
-
-    main h4 + p {
-        margin-top: 3px;
-    }
-
-    main p {
-        color: var(--black);
-    }
-
-    /* grad students click here reference */
-    main div.page-body p a {
-        color: var(--black);
-        text-decoration: none;
-    }
-
-    main div.page-body p a:hover {
-        text-decoration: underline;
-    }
-
-    @media screen and (width >= 1200px) {
-        main h4 {
-            font-size: 20px;
-            letter-spacing: 1px;
+        @media screen and (width >= 600px) {
+            h2 {
+                font-size: 30px;
+            }
         }
 
-        main nav.intro-links {
-            font-size: 18px;
-            gap: 12px;
+        @media screen and (width >= 900px) {
+            div.two-col {
+                flex-direction: row;
+                gap: 30px;
+
+                .page-intro {
+                    width: 30%;
+                    min-width: 240px;
+                    flex-shrink: 0;
+                }
+
+                .page-body {
+                    flex-grow: 1;
+                    min-width: 0;
+                    border-left: 3px dotted var(--black);
+                    padding-left: 30px;
+                }
+            }
         }
 
-        main nav.sub-nav {
-            font-size: 17px;
-        }
+        @media screen and (width >= 1200px) {
+            h2 {
+                font-size: 44px;
+            }
 
-        main a.action-link {
-            font-size: 18px;
-        }
+            h4 {
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
 
-        main div.two-col .page-intro {
-            width: 32%;
-            min-width: 300px;
+            nav.intro-links {
+                font-size: 18px;
+                gap: 12px;
+            }
+
+            nav.sub-nav {
+                font-size: 17px;
+            }
+
+            a.action-link {
+                font-size: 18px;
+            }
+
+            div.two-col .page-intro {
+                width: 32%;
+                min-width: 300px;
+
+                h2 {
+                    font-size: 32px;
+                }
+            }
         }
     }
 }
