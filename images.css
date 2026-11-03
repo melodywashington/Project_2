@@ -4,16 +4,23 @@ main {
 
         &.right {
             float: right;
-            margin-left: 1rem;
+            margin-left: 16px;
         }
 
         &.left {
             float: left;
-            margin-right: 1rem;
+            margin-right: 16px;
         }
     }
     div.page-body img {
         max-width: 100%;
         border-radius: 10px;
+    }
+
+    /* picture on grad students page*/
+    div.page-body > img {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

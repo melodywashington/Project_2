@@ -8,21 +8,38 @@
 body {
     background-color: #292827;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 
     div.container { /* Container div */
         min-width: 390px;
-        max-width: 780px;
+        max-width: 1400px;
+        min-height: 100vh;
         margin: 0 auto;
         background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (height >= 1100px) {
+            min-height: 1100px;
+        }
 
         header {
             img {
                 display: block;
                 width: 100%;
             }
+
+            /* books img */
+            img:last-of-type {
+                max-height: 150px;
+                object-fit: cover;
+            }
         }
 
         section.middle {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
             min-height: 500px;
             padding: 10px;
             background-image: url('files/uofu_medallion_rt.gif');
@@ -65,6 +82,7 @@ body {
 
                 &.bottom {
                     text-transform: lowercase;
+                    margin-top: auto;
                 }
             }
         }
@@ -79,10 +97,6 @@ body {
             aside {
                 &.left-side {
                     display: none;
-
-                    nav {
-                        /* nav styles here */
-                    }
                 }
             }
 
@@ -106,10 +120,9 @@ body {
 
         /* Tablet and up overrides */
         @media screen and (width >= 600px) {
-            /* A breakpoint */
             section.middle {
-                > nav { /* nav child */
-                    text-align: right; /* Override the mobile property */
+                > nav {
+                    text-align: right;
 
                     &.drop-down-menu {
                         display: none;
@@ -139,6 +152,10 @@ body {
                                         background-color: var(--engDeptGreen);
                                         color: #fff;
                                     }
+
+                                    &.active {
+                                        font-weight: bold;
+                                    }
                                 }
                             }
                         }
@@ -149,6 +166,55 @@ body {
                         width: 60%;
                     }
                 }
+            }
+        }
+
+        /* big screens */
+        @media screen and (width >= 1200px) {
+            section.middle {
+                padding: 20px 30px;
+
+                > nav {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+
+                div.green-box {
+                    padding: 40px 50px;
+
+                    aside.left-side nav a {
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 18px 0 18px 20px;
+                    }
+
+                    main {
+                        padding: 30px;
+                        font-size: 18px;
+
+                        h2.section-title {
+                            font-size: 32px;
+                        }
+
+                        /* two news cards show at once */
+                        .news-slide {
+                            width: 45%;
+                        }
+
+                        .news-slide img {
+                            height: 280px;
+                        }
+
+                        div.login-links img {
+                            width: 230px;
+                        }
+                    }
+                }
+            }
+
+            footer {
+                font-size: 13px;
+                padding: 14px 0;
             }
         }
     }
