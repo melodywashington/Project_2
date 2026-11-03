@@ -11,7 +11,7 @@ body {
     margin: 0;
 
     div.container { /* Container div */
-        min-width: 390px;
+        min-width: 320px;
         max-width: 1400px;
         min-height: 100vh;
         margin: 0 auto;

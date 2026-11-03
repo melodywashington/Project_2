@@ -5,6 +5,8 @@
   <title>HUMIS Homepage in GitHub!</title>
   <link rel="stylesheet" href="homepage-styles.css">
   <link rel="stylesheet" href="figma-designs.css">
+  <link rel="stylesheet" href="mobile-menu.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -14,6 +16,24 @@
   <header>
     <img src="files/historyHome.gif" alt="Department of History, University of Utah"/>
     <img src="files/histHomepic.jpg" alt="Shelf of history books"/>
+
+    <div class="mobile-nav">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">
+        <span class="material-symbols-outlined icon-open">menu</span>
+        <span class="material-symbols-outlined icon-close">close</span>
+        Menu
+      </label>
+
+      <nav class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About us</a>
+        <a href="grad-students.html">Graduate students</a>
+        <a href="news.html">News &amp; announcements</a>
+        <a href="friends-and-alum.html">Friends &amp; alumni</a>
+        <a href="contact-us.html">Contact us</a>
+      </nav>
+    </div>
   </header>
 
   <section class="middle">

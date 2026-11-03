@@ -1,0 +1,83 @@
+:root {
+    --engDeptGreen: #505A2F;
+    --menu-grey: #F2F1F0;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media screen and (width < 600px) {
+    .mobile-nav {
+        display: block;
+        background-color: var(--engDeptGreen);
+    }
+
+    .menu-toggle {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible + .menu-button {
+        outline: 2px solid #fff;
+    }
+
+    /* menu icons */
+    .menu-button .material-symbols-outlined {
+        font-size: 28px;
+    }
+
+    .menu-button .icon-close {
+        display: none;
+    }
+
+    .menu-toggle:checked + .menu-button .icon-open {
+        display: none;
+    }
+
+    .menu-toggle:checked + .menu-button .icon-close {
+        display: inline;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--menu-grey);
+    }
+
+    .mobile-menu a {
+        padding: 14px 16px;
+        border-bottom: 2px solid var(--engDeptGreen);
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--engDeptGreen);
+            color: #fff;
+        }
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+}
