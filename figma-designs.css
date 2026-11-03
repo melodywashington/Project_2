@@ -43,10 +43,10 @@
     display: flex;
     gap: 12px;
     margin: 12px 0 24px;
-}
 
-.btn-row .btn {
-    flex: 1;
+    .btn {
+        flex: 1;
+    }
 }
 
 .card {
@@ -84,14 +84,14 @@
 .news-slide {
     width: 80%;
     flex-shrink: 0;
-}
 
-.news-slide img {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 24px;
+    img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 24px;
+    }
 }
 
 /* homepage log-in links */
@@ -102,11 +102,11 @@ body div.container div.green-box main div.login-links {
     align-items: flex-end;
     gap: 20px;
     margin-top: 24px;
-}
 
-body div.container div.green-box main div.login-links img {
-    width: 170px;
-    height: auto;
+    img {
+        width: 170px;
+        height: auto;
+    }
 }
 
 /* degree chips */
@@ -127,69 +127,17 @@ body div.container div.green-box main div.login-links img {
     border: 1px solid #000;
     border-radius: 12px;
     padding: 10px;
-}
 
-.chip span {
-    font-size: 12px;
+    span {
+        font-size: 12px;
+    }
 }
-
-/* video on about us page */
-.video-hero {
-    position: relative;
-    display: block;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 24px;
-}
-
-.video-hero img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.video-hero .play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: var(--burgundy);
-    border: 3px solid #fff;
-}
-
-.video-hero .play::after {
-    content: "";
-    position: absolute;
-    left: 21px;
-    top: 15px;
-    border-left: 16px solid #fff;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-
-.video-hero .caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-    padding: 8px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
 
 /* friends and alumni */
 .hero-photo {
     display: block;
     width: 100%;
-    height: clamp(180px, 30vw, 320px);
+    height: 200px;
     object-fit: cover;
 }
 
@@ -198,39 +146,58 @@ body section.container section.middle section.inner main.friends-panel {
     margin-top: -30px;
     background-color: #fff;
     border-radius: 20px 20px 0 0;
-    padding: clamp(20px, 4vw, 40px);
+    padding: 20px;
 }
 
-main.friends-panel h2,
-main.friends-panel h3 {
-    color: var(--burgundy);
-    text-transform: uppercase;
-    font-size: clamp(22px, 4vw, 32px);
-    border-bottom: 3px solid var(--burgundy);
-    padding-bottom: 6px;
-    margin: 0 0 16px;
+main.friends-panel {
+    h2, h3 {
+        color: var(--burgundy);
+        text-transform: uppercase;
+        font-size: 22px;
+        border-bottom: 3px solid var(--burgundy);
+        padding-bottom: 6px;
+        margin: 0 0 16px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btn-primary {
+        margin-top: 24px;
+    }
+
+    .card {
+        h4 {
+            text-transform: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0 0 8px;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+
+        .btn-small {
+            margin-top: 0;
+        }
+    }
 }
 
-main.friends-panel p {
-    font-size: 14px;
-    line-height: 1.5;
-}
+@media screen and (width >= 900px) {
+    .hero-photo {
+        height: 300px;
+    }
 
-main.friends-panel .btn-primary {
-    margin-top: 24px;
-}
+    body section.container section.middle section.inner main.friends-panel {
+        padding: 40px;
+    }
 
-main.friends-panel .card h4 {
-    text-transform: none;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 0 0 8px;
-}
-
-main.friends-panel .card p {
-    margin: 0 0 10px;
-}
-
-main.friends-panel .card .btn-small {
-    margin-top: 0;
+    main.friends-panel {
+        h2, h3 {
+            font-size: 32px;
+        }
+    }
 }

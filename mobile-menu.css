@@ -16,6 +16,24 @@
     .menu-toggle {
         position: absolute;
         opacity: 0;
+
+        &:focus-visible + .menu-button {
+            outline: 2px solid #fff;
+        }
+
+        &:checked + .menu-button {
+            .icon-open {
+                display: none;
+            }
+
+            .icon-close {
+                display: inline;
+            }
+        }
+
+        &:checked ~ .mobile-menu {
+            display: flex;
+        }
     }
 
     .menu-button {
@@ -29,55 +47,38 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
-    }
 
-    .menu-toggle:focus-visible + .menu-button {
-        outline: 2px solid #fff;
-    }
+        .material-symbols-outlined {
+            font-size: 28px;
+        }
 
-    /* menu icons */
-    .menu-button .material-symbols-outlined {
-        font-size: 28px;
-    }
-
-    .menu-button .icon-close {
-        display: none;
-    }
-
-    .menu-toggle:checked + .menu-button .icon-open {
-        display: none;
-    }
-
-    .menu-toggle:checked + .menu-button .icon-close {
-        display: inline;
+        .icon-close {
+            display: none;
+        }
     }
 
     .mobile-menu {
         display: none;
         flex-direction: column;
         background-color: var(--menu-grey);
-    }
 
-    .mobile-menu a {
-        padding: 14px 16px;
-        border-bottom: 2px solid var(--engDeptGreen);
-        color: #000;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        text-transform: uppercase;
-        text-decoration: none;
+        a {
+            padding: 14px 16px;
+            border-bottom: 2px solid var(--engDeptGreen);
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
 
-        &:hover {
-            background-color: var(--engDeptGreen);
-            color: #fff;
+            &:hover {
+                background-color: var(--engDeptGreen);
+                color: #fff;
+            }
+
+            &.active {
+                font-weight: bold;
+            }
         }
-
-        &.active {
-            font-weight: bold;
-        }
-    }
-
-    .menu-toggle:checked ~ .mobile-menu {
-        display: flex;
     }
 }
